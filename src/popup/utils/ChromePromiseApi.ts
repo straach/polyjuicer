@@ -41,7 +41,7 @@ export class ChromePromiseAPI {
 
     private static fixAllSubdomainCookieHostname(hostname: string) {
         let hostnameFilter = hostname;
-        if (hostname.indexOf(ALL_SUBDOMAIN_COOKIE_URL) === 0) {
+        if (hostname.indexOf(ALL_SUBDOMAIN_COOKIE_URL) > 0) {
             hostnameFilter = ALL_SUBDOMAIN_COOKIE_URL.substring(1);
         }
         return hostnameFilter;
